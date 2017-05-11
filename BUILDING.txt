@@ -1,0 +1,40 @@
+Building Gitbook Documentation
+
+== Prerequisites:
+
+* gitbook installed
+
+One time setup of plugins if book.json changes/plugins are added:
+
+gitbook install
+
+== Building Instructions
+
+Note:
+  When building remotely via ssh session on a remote Linux, you may need to set the env:
+
+export DISPLAY=:0
+
+=== To generate static html:
+
+gitbook build .
+# the index file will be in
+#  _book/index.html
+
+=== To generate pdf:
+
+# then run:
+gitbook pdf ./ ./flowdoc.pdf
+
+=== To Start Local gitbook server
+
+
+To listen on default ports and navigate to  http://localhost:4000
+
+gitbook serve
+
+
+Or to listen on changed ports and navigate to  http://localhost:4030
+
+gitbook serve --lrport 35739 --port 4030
+                                           
